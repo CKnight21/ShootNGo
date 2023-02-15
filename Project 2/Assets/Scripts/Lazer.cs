@@ -25,6 +25,18 @@ public class Lazer : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            void OnTriggerEnter(Collider other)
+            {
+                if (other.CompareTag("Player"))
+                {
+                    other.GetComponent<EnemyHealth>().TakeDamage(1);
+                }
+
+            }
+
+        }
         if (collision.gameObject.tag == "Boundray")
         {
             

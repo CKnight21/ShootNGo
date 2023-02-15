@@ -20,5 +20,7 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
+
+       
     }
 }

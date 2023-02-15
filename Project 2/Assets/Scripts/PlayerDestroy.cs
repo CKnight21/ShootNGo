@@ -9,7 +9,7 @@ public class PlayerDestroy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Health>().TakeDamage(1);
         }
 
     }
